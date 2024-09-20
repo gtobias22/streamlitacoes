@@ -29,7 +29,7 @@ dados = carregar_dados(acoes)
 # Criar a interface do streamlit
 
 st.write("""
-# App Preço de Ações
+# Aplicativo de  Preço de Ações
 O gráfico abaixo representa a evolução do preço de ações ao longo do anos.
 """)  # Markdown
 
