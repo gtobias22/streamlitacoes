@@ -6,8 +6,6 @@ import yfinance as yf
 from datetime import timedelta
 
 # Criar funções de carregamento de dados
-# Cotação do Itau - ITUB4 - 2010 à 2024
-
 
 @st.cache_data
 def carregar_dados(empresas):
