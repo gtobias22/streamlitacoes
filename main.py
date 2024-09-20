@@ -11,7 +11,7 @@ from datetime import timedelta
 def carregar_dados(empresas):
     texto_tickers = " ".join(empresas)
     dados_acao = yf.Tickers(texto_tickers)
-    cotacoes_acao = dados_acao.history(period="1d", start="2010-01-01", end="2024-07-01")
+    cotacoes_acao = dados_acao.history(period="1d", start="2010-01-01", end="2024-08-30")
     cotacoes_acao = cotacoes_acao["Close"]
     return cotacoes_acao
 
@@ -30,7 +30,7 @@ dados = carregar_dados(acoes)
 
 st.write("""
 # Aplicativo de  Preço de Ações
-O gráfico abaixo representa a evolução do preço de ações ao longo do anos.
+O gráfico abaixo representa a evolução do preço de ações de 01/01/2010 à 30/08/2024.
 """)  # Markdown
 
 # Preparar as visualizações = FILTROS
@@ -95,7 +95,7 @@ else:
     texto_performace_carteira = f"Performace da carteira com todos os ativos: {performace_carteira:.1%}"
 
 st.write(f"""
-### Seção de performace dos ativos
+### Seção de Performace dos Ativos
 Essa foi a performace de cada ativo no período selecionado:
          
 {texto_performace_ativo}
